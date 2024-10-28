@@ -12,7 +12,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { SunIcon, MoonIcon } from "@chakra-ui/icons";
-import { HiDownload } from "react-icons/hi";
+import { HiDownload, HiOutlineMail } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { BsLinkedin } from "react-icons/bs";
 
@@ -101,6 +101,20 @@ const Header = () => {
         >
           <Icon as={BsLinkedin} boxSize="6" />
           <Text>LinkedIn</Text>
+        </HStack>
+
+        <HStack
+          as="a"
+          href="mailto:jamie.benstead@gmail.com"
+          download={true}
+          sx={{
+            transition: "transform 0.2s, color 0.2s",
+            color: hoverColor,
+            _hover: { transform: "scale(1.1)", color: hoverColor },
+          }}
+        >
+          <Icon as={HiOutlineMail} boxSize="6" />
+          <Text>Email</Text>
         </HStack>
 
         <HStack
