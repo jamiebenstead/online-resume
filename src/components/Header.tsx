@@ -59,7 +59,7 @@ const Header = () => {
               I'm a <Box as="b">Full Stack Developer</Box> with over{" "}
               <Box as="b">6 years</Box> of experience - I enjoy building{" "}
               <Box as="i">interactive websites</Box> using tools such as{" "}
-              <Box as="u">React, NextJS, NodeJS, and GraphQL.</Box>
+              <Box as="u">React, Next.js, Node.js, and GraphQL.</Box>
             </Text>
           </Text>
         </VStack>
