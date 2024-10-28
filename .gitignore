@@ -17,6 +17,7 @@
 .env.development.local
 .env.test.local
 .env.production.local
+CV.pdf
 notes.txt
 
 npm-debug.log*
