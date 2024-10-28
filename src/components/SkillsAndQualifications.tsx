@@ -31,7 +31,7 @@ const SkillsAndQualifications = () => {
     >
       <Flex paddingBottom="4">
         <Heading as="h2" fontSize="3xl" fontWeight="bold">
-          Skills and Qualifications
+          Skills
         </Heading>
       </Flex>
       <Flex paddingTop="4">
@@ -45,7 +45,8 @@ const SkillsAndQualifications = () => {
             <HStack align="start">
               <Icon as={FaCheck} color={iconColor} boxSize="5" />
               <Text fontSize="lg" fontWeight="medium">
-                Over 6 years of Full-Stack Development Experience
+                <Box as="b">Programming Languages:</Box> JavaScript, TypeScript,
+                PHP, C#, SQL, CSS, HTML
               </Text>
             </HStack>
           </ListItem>
@@ -59,7 +60,8 @@ const SkillsAndQualifications = () => {
             <HStack align="start">
               <Icon as={FaCheck} color={iconColor} boxSize="5" />
               <Text fontSize="lg" fontWeight="medium">
-                Skilled in Modern Technologies: React, NextJS, TypeScript
+                <Box as="b">Frameworks & Libraries:</Box> React, Angular,
+                Next.js, Ionic, ExtJS, Laravel, Tailwind, I18N
               </Text>
             </HStack>
           </ListItem>
@@ -73,8 +75,8 @@ const SkillsAndQualifications = () => {
             <HStack align="start">
               <Icon as={FaCheck} color={iconColor} boxSize="5" />
               <Text fontSize="lg" fontWeight="medium">
-                Strong Background in Test-Driven Development, Unit Testing, and
-                QA Processes
+                <Box as="b">Backend, Database, & CMS Tools:</Box> Node.js,
+                GraphQL, MySQL, Strapi, Filament
               </Text>
             </HStack>
           </ListItem>
@@ -88,7 +90,22 @@ const SkillsAndQualifications = () => {
             <HStack align="start">
               <Icon as={FaCheck} color={iconColor} boxSize="5" />
               <Text fontSize="lg" fontWeight="medium">
-                Proven Track Record in Project Management and Agile Development
+                <Box as="b">Testing & Validation:</Box> Jest, Yup, React Testing
+                Library, Postman
+              </Text>
+            </HStack>
+          </ListItem>
+
+          <ListItem
+            _hover={{ bg: listItemHoverColor }}
+            padding="4"
+            borderRadius="md"
+            transition="background-color 0.2s"
+          >
+            <HStack align="start">
+              <Icon as={FaCheck} color={iconColor} boxSize="5" />
+              <Text fontSize="lg" fontWeight="medium">
+                <Box as="b">Other Tools:</Box> Git, Jira, Trello
               </Text>
             </HStack>
           </ListItem>
