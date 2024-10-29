@@ -9,11 +9,61 @@ import {
   HStack,
   Icon,
   Text,
+  Collapse,
+  IconButton,
+  useDisclosure,
 } from "@chakra-ui/react";
-import { FaBriefcase } from "react-icons/fa";
+import { FaBriefcase, FaChevronDown, FaChevronUp } from "react-icons/fa";
+
+interface Responsibility {
+  heading: string;
+  description: string;
+}
+
+interface Job {
+  company: string;
+  title: string;
+  dates: string;
+  responsibilities: Responsibility[];
+}
+
+const JobEntry: React.FC<{ job: Job }> = ({ job }) => {
+  const { isOpen, onToggle } = useDisclosure();
+
+  return (
+    <Box padding="4" borderWidth="1px" borderRadius="md">
+      <HStack justify="space-between" spacing="4">
+        <HStack spacing="2">
+          <Icon as={FaBriefcase} />
+          <Box>
+            <Text fontSize="lg" fontWeight="bold">
+              {job.title} - {job.company}
+            </Text>
+            <Text fontSize="sm">{job.dates}</Text>
+          </Box>
+        </HStack>
+        <IconButton
+          icon={isOpen ? <FaChevronUp /> : <FaChevronDown />}
+          onClick={onToggle}
+          variant="outline"
+          aria-label={isOpen ? "Collapse" : "Expand"}
+        />
+      </HStack>
+      <Collapse in={isOpen}>
+        <List spacing="2" paddingTop="2">
+          {job.responsibilities.map((item, idx) => (
+            <ListItem key={idx} fontSize="sm">
+              <Box as="b">{item.heading}:</Box> {item.description}
+            </ListItem>
+          ))}
+        </List>
+      </Collapse>
+    </Box>
+  );
+};
 
 const WorkHistory = () => {
-  const workHistoryData = [
+  const workHistoryData: Job[] = [
     {
       company: "Sidney Sussex College, Cambridge",
       title: "Web Developer",
@@ -121,24 +171,7 @@ const WorkHistory = () => {
       </Flex>
       <Flex direction="column" gap="4" paddingTop="4">
         {workHistoryData.map((job, index) => (
-          <Box key={index} padding="4">
-            <HStack spacing="4">
-              <Icon as={FaBriefcase} />
-              <Box>
-                <Text fontSize="lg" fontWeight="bold">
-                  {job.title} - {job.company}
-                </Text>
-                <Text fontSize="sm">{job.dates}</Text>
-              </Box>
-            </HStack>
-            <List spacing="2" paddingTop="2">
-              {job.responsibilities.map((item, idx) => (
-                <ListItem key={idx} fontSize="sm">
-                  <Box as="b">{item.heading}:</Box> {item.description}
-                </ListItem>
-              ))}
-            </List>
-          </Box>
+          <JobEntry key={index} job={job} />
         ))}
       </Flex>
     </Box>
