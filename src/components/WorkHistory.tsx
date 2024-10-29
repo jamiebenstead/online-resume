@@ -29,7 +29,9 @@ const JobEntry = ({ job }: JobProps) => {
       padding="4"
       borderWidth="1px"
       borderRadius="md"
-      _hover={{ bg: listItemHoverColor }}
+      _hover={
+        job.responsibilities.length > 0 ? { bg: listItemHoverColor } : undefined
+      }
       transition="background-color 0.2s"
       onClick={job.responsibilities.length > 0 ? onToggle : undefined}
       cursor={job.responsibilities.length > 0 ? "pointer" : "default"}

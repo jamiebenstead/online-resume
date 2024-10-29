@@ -33,13 +33,7 @@ const SkillsAndQualifications = () => {
       <Flex paddingTop="4">
         <List spacing="4" width="100%">
           {skills.map((skill, index) => (
-            <ListItem
-              key={index}
-              _hover={{ bg: listItemHoverColor }}
-              padding="4"
-              borderRadius="md"
-              transition="background-color 0.2s"
-            >
+            <ListItem key={index} padding="4" borderRadius="md">
               <HStack spacing="2">
                 <Icon as={FaCheck} color={iconColor} boxSize="5" />
                 <Text fontSize="lg" fontWeight="medium">
