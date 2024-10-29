@@ -40,7 +40,7 @@ const SkillsAndQualifications = () => {
               borderRadius="md"
               transition="background-color 0.2s"
             >
-              <HStack align="start">
+              <HStack spacing="2">
                 <Icon as={FaCheck} color={iconColor} boxSize="5" />
                 <Text fontSize="lg" fontWeight="medium">
                   <Box as="b">{skill.category}:</Box> {skill.items}
