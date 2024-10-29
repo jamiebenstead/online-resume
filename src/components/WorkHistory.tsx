@@ -31,8 +31,8 @@ const JobEntry = ({ job }: JobProps) => {
       borderRadius="md"
       _hover={{ bg: listItemHoverColor }}
       transition="background-color 0.2s"
-      onClick={onToggle}
-      cursor={"pointer"}
+      onClick={job.responsibilities.length > 0 ? onToggle : undefined}
+      cursor={job.responsibilities.length > 0 ? "pointer" : "default"}
     >
       <HStack justify="space-between" spacing="4">
         <HStack spacing="2">
