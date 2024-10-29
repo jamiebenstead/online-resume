@@ -44,11 +44,13 @@ const JobEntry = ({ job }: JobProps) => {
             <Text fontSize="sm">{job.dates}</Text>
           </Box>
         </HStack>
-        <IconButton
-          icon={isOpen ? <FaChevronUp /> : <FaChevronDown />}
-          variant="outline"
-          aria-label={isOpen ? "Collapse" : "Expand"}
-        />
+        {job.responsibilities.length > 0 && (
+          <IconButton
+            icon={isOpen ? <FaChevronUp /> : <FaChevronDown />}
+            variant="outline"
+            aria-label={isOpen ? "Collapse" : "Expand"}
+          />
+        )}
       </HStack>
       <Collapse in={isOpen}>
         <List spacing="2" paddingTop="2">
