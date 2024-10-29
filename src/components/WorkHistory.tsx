@@ -15,6 +15,7 @@ import {
 } from "@chakra-ui/react";
 import { FaBriefcase, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { workHistoryData, Job } from "../data/workHistoryData";
+import SectionHeader from "./SectionHeader";
 
 interface JobProps {
   job: Job;
@@ -67,11 +68,7 @@ const WorkHistory = () => {
       boxShadow="md"
       maxW="container.lg"
     >
-      <Flex paddingBottom="4">
-        <Heading as="h2" fontSize="3xl" fontWeight="bold">
-          Work History
-        </Heading>
-      </Flex>
+      <SectionHeader title={"Work History"} />
       <Flex direction="column" gap="4" paddingTop="4">
         {workHistoryData.map((job, index) => (
           <JobEntry key={index} job={job} />

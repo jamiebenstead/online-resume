@@ -12,6 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { FaCheck } from "react-icons/fa";
 import { skills } from "../data/skillsData";
+import SectionHeader from "./SectionHeader";
 
 const SkillsAndQualifications = () => {
   const iconColor = useColorModeValue("green.500", "green.300");
@@ -29,11 +30,7 @@ const SkillsAndQualifications = () => {
       mx="auto"
       my="8"
     >
-      <Flex paddingBottom="4">
-        <Heading as="h2" fontSize="3xl" fontWeight="bold">
-          Skills
-        </Heading>
-      </Flex>
+      <SectionHeader title={"Skills"} />
       <Flex paddingTop="4">
         <List spacing="4" width="100%">
           {skills.map((skill, index) => (
