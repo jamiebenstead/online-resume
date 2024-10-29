@@ -31,6 +31,8 @@ const JobEntry = ({ job }: JobProps) => {
       borderRadius="md"
       _hover={{ bg: listItemHoverColor }}
       transition="background-color 0.2s"
+      onClick={onToggle}
+      cursor={"pointer"}
     >
       <HStack justify="space-between" spacing="4">
         <HStack spacing="2">
@@ -44,7 +46,6 @@ const JobEntry = ({ job }: JobProps) => {
         </HStack>
         <IconButton
           icon={isOpen ? <FaChevronUp /> : <FaChevronDown />}
-          onClick={onToggle}
           variant="outline"
           aria-label={isOpen ? "Collapse" : "Expand"}
         />
