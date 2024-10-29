@@ -23,9 +23,16 @@ interface JobProps {
 
 const JobEntry = ({ job }: JobProps) => {
   const { isOpen, onToggle } = useDisclosure();
+  const listItemHoverColor = useColorModeValue("gray.100", "gray.600");
 
   return (
-    <Box padding="4" borderWidth="1px" borderRadius="md">
+    <Box
+      padding="4"
+      borderWidth="1px"
+      borderRadius="md"
+      _hover={{ bg: listItemHoverColor }}
+      transition="background-color 0.2s"
+    >
       <HStack justify="space-between" spacing="4">
         <HStack spacing="2">
           <Icon as={FaBriefcase} />
