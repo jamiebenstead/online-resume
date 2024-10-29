@@ -3,7 +3,6 @@ import {
   useColorModeValue,
   Box,
   Flex,
-  Heading,
   List,
   ListItem,
   HStack,

@@ -1,7 +1,6 @@
 import React from "react";
 import {
   Flex,
-  Heading,
   HStack,
   Icon,
   List,
