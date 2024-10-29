@@ -11,34 +11,12 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { FaCheck } from "react-icons/fa";
+import { skills } from "../data/skillsData";
 
 const SkillsAndQualifications = () => {
   const iconColor = useColorModeValue("green.500", "green.300");
   const bgColor = useColorModeValue("gray.50", "gray.700");
   const listItemHoverColor = useColorModeValue("gray.100", "gray.600");
-
-  const skills = [
-    {
-      category: "Programming Languages",
-      items: "JavaScript, TypeScript, PHP, C#, SQL, CSS, HTML",
-    },
-    {
-      category: "Frameworks & Libraries",
-      items: "React, Angular, Next.js, Ionic, ExtJS, Laravel, Tailwind, I18N",
-    },
-    {
-      category: "Backend, Database, & CMS Tools",
-      items: "Node.js, GraphQL, MySQL, Strapi, Filament",
-    },
-    {
-      category: "Testing & Validation",
-      items: "Jest, Yup, React Testing Library, Postman",
-    },
-    {
-      category: "Other Tools",
-      items: "Git, Jira, Trello",
-    },
-  ];
 
   return (
     <Box
