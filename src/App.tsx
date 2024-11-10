@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import { Container } from "@chakra-ui/react";
 import SkillsAndQualifications from "./components/SkillsAndQualifications";
 import WorkHistory from "./components/WorkHistory";
+import Eduction from "./components/Eduction";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <SkillsAndQualifications />
       <WorkHistory />
+      <Eduction />
     </Container>
   );
 }
