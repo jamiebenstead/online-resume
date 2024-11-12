@@ -9,16 +9,16 @@ import {
   IconButton,
   HStack,
   Icon,
-  useColorModeValue,
 } from "@chakra-ui/react";
 import { SunIcon, MoonIcon } from "@chakra-ui/icons";
 import { HiDownload, HiOutlineMail } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { BsLinkedin } from "react-icons/bs";
+import { useLinkHoverColor } from "../utils/themeUtils";
 
 const Header = () => {
   const { colorMode, toggleColorMode } = useColorMode();
-  const hoverColor = useColorModeValue("gray.700", "gray.300");
+  const hoverColor = useLinkHoverColor();
 
   return (
     <>

@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  useColorModeValue,
   Box,
   Flex,
   List,
@@ -15,6 +14,7 @@ import {
 import { FaBriefcase, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { workHistoryData, Job } from "../data/workHistoryData";
 import SectionHeader from "./SectionHeader";
+import { useBgColor, useListItemHoverColor } from "../utils/themeUtils";
 
 interface JobProps {
   job: Job;
@@ -22,7 +22,7 @@ interface JobProps {
 
 const JobEntry = ({ job }: JobProps) => {
   const { isOpen, onToggle } = useDisclosure();
-  const listItemHoverColor = useColorModeValue("gray.100", "gray.600");
+  const listItemHoverColor = useListItemHoverColor();
 
   return (
     <Box
@@ -73,7 +73,7 @@ const JobEntry = ({ job }: JobProps) => {
 };
 
 const WorkHistory = () => {
-  const bgColor = useColorModeValue("gray.50", "gray.700");
+  const bgColor = useBgColor();
 
   return (
     <Box

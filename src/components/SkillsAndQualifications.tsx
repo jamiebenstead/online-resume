@@ -7,16 +7,15 @@ import {
   ListItem,
   Text,
   Box,
-  useColorModeValue,
 } from "@chakra-ui/react";
 import { FaCheck } from "react-icons/fa";
 import { skills } from "../data/skillsData";
 import SectionHeader from "./SectionHeader";
+import { useBgColor, useIconColor } from "../utils/themeUtils";
 
 const SkillsAndQualifications = () => {
-  const iconColor = useColorModeValue("green.500", "green.300");
-  const bgColor = useColorModeValue("gray.50", "gray.700");
-  const listItemHoverColor = useColorModeValue("gray.100", "gray.600");
+  const iconColor = useIconColor();
+  const bgColor = useBgColor();
 
   return (
     <Box

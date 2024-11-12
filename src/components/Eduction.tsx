@@ -7,7 +7,6 @@ import {
   List,
   ListItem,
   Text,
-  useColorModeValue,
   Collapse,
   IconButton,
   useDisclosure,
@@ -21,10 +20,11 @@ import {
   FaChevronUp,
 } from "react-icons/fa";
 import { universityModuleData } from "../data/universityModulesData";
+import { useBgColor, useListItemHoverColor } from "../utils/themeUtils";
 
 const Eduction = () => {
-  const bgColor = useColorModeValue("gray.50", "gray.700");
-  const listItemHoverColor = useColorModeValue("gray.100", "gray.600");
+  const bgColor = useBgColor();
+  const listItemHoverColor = useListItemHoverColor();
   const { isOpen, onToggle } = useDisclosure();
 
   return (
