@@ -58,7 +58,12 @@ const JobEntry = ({ job }: JobProps) => {
         <List spacing="2" paddingTop="2">
           {job.responsibilities.map((item, idx) => (
             <ListItem key={idx} fontSize="sm">
-              <Box as="b">{item.heading}:</Box> {item.description}
+              <Text fontWeight="bold">
+                {item.heading}:{" "}
+                <Text as="span" fontWeight="medium">
+                  {item.description}
+                </Text>
+              </Text>
             </ListItem>
           ))}
         </List>
