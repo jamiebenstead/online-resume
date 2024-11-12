@@ -39,7 +39,7 @@ export const workHistoryData: Job[] = [
     dates: "April 2021 - January 2024",
     responsibilities: [
       {
-        heading: "Feature Enhancements:",
+        heading: "Feature Enhancements",
         description:
           "Revamped a customer web app with a redesign that added new front-end functionality and ensured comprehensive test coverage",
       },
