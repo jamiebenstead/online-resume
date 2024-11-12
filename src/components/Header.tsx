@@ -38,7 +38,7 @@ const Header = () => {
         paddingTop="16"
       >
         <Image
-          src="/profile-image-web.jpg"
+          src="profile-image-web.jpg"
           alt="Profile Picture"
           boxSize="160px"
           borderRadius="full"
@@ -117,7 +117,7 @@ const Header = () => {
 
         <HStack
           as="a"
-          href="/Jamie Benstead CV.pdf"
+          href="Jamie Benstead CV.pdf"
           download={true}
           sx={{
             transition: "transform 0.2s, color 0.2s",
