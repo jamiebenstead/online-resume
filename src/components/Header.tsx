@@ -119,7 +119,7 @@ const Header = () => {
 
         <HStack
           as="a"
-          href="/CV.pdf"
+          href="/Jamie Benstead CV.pdf"
           download={true}
           sx={{
             transition: "transform 0.2s, color 0.2s",
