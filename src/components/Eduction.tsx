@@ -20,6 +20,7 @@ import {
   FaChevronDown,
   FaChevronUp,
 } from "react-icons/fa";
+import { universityModuleData } from "../data/universityModulesData";
 
 const Eduction = () => {
   const bgColor = useColorModeValue("gray.50", "gray.700");
@@ -92,62 +93,16 @@ const Eduction = () => {
             <Collapse in={isOpen} animateOpacity>
               <Box>
                 <List spacing="2" paddingTop="2">
-                  <ListItem>
-                    <Text fontSize="sm" fontWeight="medium" color="gray.700">
-                      Database Design and Implementation:{" "}
-                      <Text as="span" fontWeight="bold" color="gray.900">
-                        87%
+                  {universityModuleData.map((module, index) => (
+                    <ListItem key={index}>
+                      <Text fontSize="sm" fontWeight="medium">
+                        {module.name}:{" "}
+                        <Text as="span" fontWeight="bold">
+                          {module.result}
+                        </Text>
                       </Text>
-                    </Text>
-                  </ListItem>
-                  <ListItem>
-                    <Text fontSize="sm" fontWeight="medium" color="gray.700">
-                      Interaction and Usability:{" "}
-                      <Text as="span" fontWeight="bold" color="gray.900">
-                        77%
-                      </Text>
-                    </Text>
-                  </ListItem>
-                  <ListItem>
-                    <Text fontSize="sm" fontWeight="medium" color="gray.700">
-                      Software Engineering:{" "}
-                      <Text as="span" fontWeight="bold" color="gray.900">
-                        82%
-                      </Text>
-                    </Text>
-                  </ListItem>
-                  <ListItem>
-                    <Text fontSize="sm" fontWeight="medium" color="gray.700">
-                      Digital Security:{" "}
-                      <Text as="span" fontWeight="bold" color="gray.900">
-                        82%
-                      </Text>
-                    </Text>
-                  </ListItem>
-                  <ListItem>
-                    <Text fontSize="sm" fontWeight="medium" color="gray.700">
-                      Image Processing:{" "}
-                      <Text as="span" fontWeight="bold" color="gray.900">
-                        86%
-                      </Text>
-                    </Text>
-                  </ListItem>
-                  <ListItem>
-                    <Text fontSize="sm" fontWeight="medium" color="gray.700">
-                      Mobile Technology:{" "}
-                      <Text as="span" fontWeight="bold" color="gray.900">
-                        81%
-                      </Text>
-                    </Text>
-                  </ListItem>
-                  <ListItem>
-                    <Text fontSize="sm" fontWeight="medium" color="gray.700">
-                      Distributed Systems Programming:{" "}
-                      <Text as="span" fontWeight="bold" color="gray.900">
-                        82%
-                      </Text>
-                    </Text>
-                  </ListItem>
+                    </ListItem>
+                  ))}
                 </List>
               </Box>
             </Collapse>
