@@ -38,7 +38,7 @@ const Header = () => {
         paddingTop="16"
       >
         <Image
-          src="/assets/C0830_121-2 - web.jpg"
+          src="/assets/profile-image-web.jpg"
           alt="Profile Picture"
           boxSize="160px"
           borderRadius="full"
