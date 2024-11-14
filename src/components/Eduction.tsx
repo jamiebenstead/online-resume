@@ -10,6 +10,7 @@ import {
   Collapse,
   IconButton,
   useDisclosure,
+  UnorderedList,
 } from "@chakra-ui/react";
 import SectionHeader from "./SectionHeader";
 import {
@@ -92,7 +93,7 @@ const Eduction = () => {
             </HStack>
             <Collapse in={isOpen} animateOpacity>
               <Box>
-                <List spacing="2" paddingTop="2">
+                <UnorderedList spacing="2" paddingTop="2">
                   {universityModuleData.map((module, index) => (
                     <ListItem key={index}>
                       <Text fontSize="sm" fontWeight="medium">
@@ -103,7 +104,7 @@ const Eduction = () => {
                       </Text>
                     </ListItem>
                   ))}
-                </List>
+                </UnorderedList>
               </Box>
             </Collapse>
           </ListItem>

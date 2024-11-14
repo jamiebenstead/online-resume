@@ -1,4 +1,11 @@
-import { Box, Flex, List, ListItem, Text, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  ListItem,
+  Text,
+  UnorderedList,
+  VStack,
+} from "@chakra-ui/react";
 import { useBgColor } from "../utils/themeUtils";
 import { aboutMeData } from "../data/aboutMeData";
 import SectionHeader from "./SectionHeader";
@@ -24,7 +31,7 @@ const AboutMe = () => {
             I’m passionate about both my professional work and my hobbies
             outside of tech. Here’s a bit about me beyond the code.
           </Text>
-          <List spacing="4" paddingTop="2">
+          <UnorderedList spacing="4" paddingTop="2">
             {aboutMeData.map((hobby, idx) => (
               <ListItem key={idx} fontSize="sm">
                 <Text fontSize="md" fontWeight="medium">
@@ -32,7 +39,7 @@ const AboutMe = () => {
                 </Text>
               </ListItem>
             ))}
-          </List>
+          </UnorderedList>
         </VStack>
       </Flex>
     </Box>
