@@ -14,7 +14,8 @@ import {
 import { FaBriefcase, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { workHistoryData, Job } from "../data/workHistoryData";
 import SectionHeader from "./SectionHeader";
-import { useBgColor, useListItemHoverColor } from "../utils/themeUtils";
+import { useListItemHoverColor } from "../utils/themeUtils";
+import SectionBox from "./SectionBox";
 
 interface JobProps {
   job: Job;
@@ -73,24 +74,15 @@ const JobEntry = ({ job }: JobProps) => {
 };
 
 const WorkHistory = () => {
-  const bgColor = useBgColor();
-
   return (
-    <Box
-      as="section"
-      padding="8"
-      bg={bgColor}
-      borderRadius="lg"
-      boxShadow="md"
-      maxW="container.lg"
-    >
+    <SectionBox>
       <SectionHeader title={"Work History"} />
       <Flex direction="column" gap="4" paddingTop="4">
         {workHistoryData.map((job, index) => (
           <JobEntry key={index} job={job} />
         ))}
       </Flex>
-    </Box>
+    </SectionBox>
   );
 };
 

@@ -6,24 +6,13 @@ import {
   UnorderedList,
   VStack,
 } from "@chakra-ui/react";
-import { useBgColor } from "../utils/themeUtils";
 import { aboutMeData } from "../data/aboutMeData";
 import SectionHeader from "./SectionHeader";
+import SectionBox from "./SectionBox";
 
 const AboutMe = () => {
-  const bgColor = useBgColor();
-
   return (
-    <Box
-      as="section"
-      padding="8"
-      bg={bgColor}
-      borderRadius="lg"
-      boxShadow="md"
-      maxW="container.lg"
-      mx="auto"
-      my="8"
-    >
+    <SectionBox>
       <SectionHeader title={"Who am I?"} />
       <Flex paddingTop="4">
         <VStack padding="4">
@@ -42,7 +31,7 @@ const AboutMe = () => {
           </UnorderedList>
         </VStack>
       </Flex>
-    </Box>
+    </SectionBox>
   );
 };
 

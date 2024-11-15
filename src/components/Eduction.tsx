@@ -21,24 +21,15 @@ import {
   FaChevronUp,
 } from "react-icons/fa";
 import { universityModuleData } from "../data/universityModulesData";
-import { useBgColor, useListItemHoverColor } from "../utils/themeUtils";
+import { useListItemHoverColor } from "../utils/themeUtils";
+import SectionBox from "./SectionBox";
 
 const Eduction = () => {
-  const bgColor = useBgColor();
   const listItemHoverColor = useListItemHoverColor();
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Box
-      as="section"
-      padding="8"
-      bg={bgColor}
-      borderRadius="lg"
-      boxShadow="md"
-      maxW="container.lg"
-      mx="auto"
-      my="8"
-    >
+    <SectionBox>
       <SectionHeader title={"Education and Awards"} />
       <Flex paddingTop="4">
         <List spacing="4" width="100%">
@@ -110,7 +101,7 @@ const Eduction = () => {
           </ListItem>
         </List>
       </Flex>
-    </Box>
+    </SectionBox>
   );
 };
 

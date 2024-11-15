@@ -11,23 +11,14 @@ import {
 import { FaCheck } from "react-icons/fa";
 import { skills } from "../data/skillsData";
 import SectionHeader from "./SectionHeader";
-import { useBgColor, useIconColor } from "../utils/themeUtils";
+import { useIconColor } from "../utils/themeUtils";
+import SectionBox from "./SectionBox";
 
 const SkillsAndQualifications = () => {
   const iconColor = useIconColor();
-  const bgColor = useBgColor();
 
   return (
-    <Box
-      as="section"
-      padding="8"
-      bg={bgColor}
-      borderRadius="lg"
-      boxShadow="md"
-      maxW="container.lg"
-      mx="auto"
-      my="8"
-    >
+    <SectionBox>
       <SectionHeader title={"Skills"} />
       <Flex paddingTop="4">
         <List spacing="4" width="100%">
@@ -43,7 +34,7 @@ const SkillsAndQualifications = () => {
           ))}
         </List>
       </Flex>
-    </Box>
+    </SectionBox>
   );
 };
 
