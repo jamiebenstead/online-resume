@@ -9,6 +9,7 @@ import {
   IconButton,
   HStack,
   Icon,
+  Grid,
 } from "@chakra-ui/react";
 import { SunIcon, MoonIcon } from "@chakra-ui/icons";
 import { HiDownload, HiOutlineMail } from "react-icons/hi";
@@ -63,13 +64,14 @@ const Header = () => {
         </VStack>
       </Flex>
 
-      <Flex
-        direction={{ base: "column", md: "row" }}
+      <Grid
+        templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(4, 1fr)" }}
+        gap={{ base: 6, md: 4 }}
+        justifyItems="center"
         alignItems="center"
-        justifyContent="center"
+        paddingTop="8"
+        paddingX="32"
         width="100%"
-        paddingTop="4"
-        gap={4}
       >
         <HStack
           as="a"
@@ -128,7 +130,7 @@ const Header = () => {
           <Icon as={HiDownload} boxSize="6" />
           <Text>Download Resume</Text>
         </HStack>
-      </Flex>
+      </Grid>
     </>
   );
 };
