@@ -67,10 +67,10 @@ const Header = () => {
       <Grid
         templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(4, 1fr)" }}
         gap={{ base: 6, md: 4 }}
-        justifyItems="center"
+        justifyItems={{ base: "left", sm: "center" }}
         alignItems="center"
         paddingTop="8"
-        paddingX="32"
+        paddingX={{ base: "8", sm: "32" }}
         width="100%"
       >
         <HStack
