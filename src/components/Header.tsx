@@ -68,7 +68,7 @@ const Header = () => {
           />
 
           <VStack align={{ base: "center", md: "start" }} spacing="1">
-            <Text fontSize="5xl" fontWeight="bold">
+            <Text as="h1" fontSize="5xl" fontWeight="bold">
               Jamie Benstead
             </Text>
             <Text fontSize="l" textAlign={{ base: "center", md: "left" }}>
